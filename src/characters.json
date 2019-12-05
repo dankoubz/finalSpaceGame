@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "name": "Gary",
+    "image": "assets/gary.png",
+    "isClicked": false
+  },
+  {
+    "id": 1,
+    "name": "Ash",
+    "image": "assets/ash.png",
+    "isClicked": false
+  },
+  {
+    "id": 2,
+    "name": "Avocato",
+    "image": "assets/avocato.png",
+    "isClicked": false
+  },
+  {
+    "id": 3,
+    "name": "Clarence",
+    "image": "assets/clarence.png",
+    "isClicked": false
+  },
+  {
+    "id": 4,
+    "name": "Cookie",
+    "image": "assets/cookie.png",
+    "isClicked": false
+  },
+  {
+    "id": 5,
+    "name": "Creepy Guy",
+    "image": "assets/creepyguy.png",
+    "isClicked": false
+  },
+  {
+    "id": 6,
+    "name": "Happy Guy",
+    "image": "assets/happyguy.png",
+    "isClicked": false
+  },
+  {
+    "id": 7,
+    "name": "H.U.E",
+    "image": "assets/hue.png",
+    "isClicked": false
+  },
+  {
+    "id": 8,
+    "name": "Kevin",
+    "image": "assets/kevin.png",
+    "isClicked": false
+  },
+  {
+    "id": 9,
+    "name": "Lil Cato",
+    "image": "assets/lilcato.png",
+    "isClicked": false
+  },
+  {
+    "id": 10,
+    "name": "Lord Commander",
+    "image": "assets/lordcommander.png",
+    "isClicked": false
+  },
+  {
+    "id": 11,
+    "name": "Mooncake",
+    "image": "assets/mooncake.png",
+    "isClicked": false
+  },
+  {
+    "id": 12,
+    "name": "Nightfall",
+    "image": "assets/nightfall.png",
+    "isClicked": false
+  },
+  {
+    "id": 13,
+    "name": "Quinn",
+    "image": "assets/quinn.png",
+    "isClicked": false
+  },
+  {
+    "id": 14,
+    "name": "Tribore",
+    "image": "assets/tribore.png",
+    "isClicked": false
+  }
+]
