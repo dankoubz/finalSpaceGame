@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Nav from "./components/Nav";
 import Background from "./components/BG";
 import characters from "./characters.json";
+import Message from "./components/Message";
 import Item from './components/Item'; 
 
 class App extends Component {
@@ -17,78 +18,86 @@ class App extends Component {
     score: 0, // collect score
     topScore: 0, // capture top score 
     maxScore: 15, // game highscore limit
-    characters: characters // characters json file
+    characters: characters, // characters json file
+    message: "Click an image to begin!",
+    messageClass: ""
   };
 
+  // shuffle cards start
   shuffle = (array) => {
-    let currentIndex = array.length;
-    let temporaryValue;
-    let randomIndex;
+    let currentIndex = array.length; // keep current
+    let temporaryValue; // hold temp value
+    let randomIndex; // hold random index
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
       // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
+      randomIndex = Math.floor(Math.random() * currentIndex); // generate num
+      currentIndex -= 1; // -1 off current index
 
       // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+      temporaryValue = array[currentIndex]; // switch current index to temp
+      array[currentIndex] = array[randomIndex]; // swap
+      array[randomIndex] = temporaryValue; // swap
     }
 
-    return array;
+    return array; // return data
   }
 
+  // function to shuffle cards when called
   shuffleChararcters = (name) => {
-    // this.handleResetWin();
-    var resetNeeded = false;
+
+    var resetNeeded = false; // set reset
+
     const characters = this.state.characters.map(clickTrue => {
-      //clickTrue.name === name ? { ...clickTrue, isClicked: true } : clickTrue
-      if(clickTrue.name === name) {
+      // check if name is the same
+      if (clickTrue.name === name) {
+        // check if clicked image is false
         if (clickTrue.isClicked === false) {
+          // run correct selection and set clickTrue to true
           this.handleCorrectSelection()
           return { ...clickTrue, isClicked: true}
-        }else{
-          resetNeeded = true
-          return { ...clickTrue, isClicked: false}
+        } else {
+          resetNeeded = true // set rest (below)
+          return { ...clickTrue, isClicked: false} // reset states
         }
       }
+
       return clickTrue
     })
 
+    // if reset true run shffle characters
     if (resetNeeded) {
       this.setState({
         characters: this.shuffle(this.handleIncorrectSelection()),
         messageClass:"incorrect"
       })
-      
-    }else{
-      //check if game is won before rendering characters
+    } else {
+      // check if game is won before rendering characters
       this.setState({ characters: this.shuffle(this.handleResetWin(characters)) })
     }
-    
   }
 
+  // function to handle correct clicks
   handleCorrectSelection = () => {
-    
+    // measure score increment to top score
     if (this.state.score+1 > this.state.topScore) {
       this.setState({topScore: this.state.topScore+1})
     }
+    // measure score to max score of 15
     if (this.state.score+1 === this.state.maxScore) {
       this.setState({score: this.state.score+1, message: "Congrats! You win!", messageClass:"correct"})
-    }else{
+    } else {
       this.setState({score: this.state.score+1, message: "You guessed correctly!", messageClass:"correct"})
     }
   }
 
   handleResetWin = (currentCharacters) => {
-    //if current score is at max reset score to 0 and topscore to 0
+    // if current score is at max reset score to 0 and topscore to 0
     if (this.state.score+1 === this.state.maxScore) {
       this.setState({score: 0, topScore: 0})
-      //reset clicked state for characters
-      const updatedCharacters = currentCharacters.map(ch => (true) ? { ...ch, isClicked: false } : ch)
+      // reset clicked state for characters
+      const updatedCharacters = currentCharacters.map(clickTrue => (true) ? { ...clickTrue, isClicked: false } : clickTrue)
       return updatedCharacters
     }else{
       return currentCharacters
@@ -99,10 +108,11 @@ class App extends Component {
     //incorrect selection made, reset score to 0
     this.setState({score: 0, message: "You guessed incorrectly!"})
     //reset clicked state for characters
-    const updatedCharacters = this.state.characters.map(ch => ch.isClicked === true ? { ...ch, isClicked: false } : ch)
+    const updatedCharacters = this.state.characters.map(clickTrue => clickTrue.isClicked === true ? { ...clickTrue, isClicked: false } : clickTrue)
     return updatedCharacters
   }
 
+  // function to redner characters from json file
   renderCharacters = () => {
     return this.state.characters.map((character) =>
             <Item 
@@ -124,10 +134,14 @@ class App extends Component {
           topscore={this.state.topScore}
         />
         
-        <div className="content items-contian col-12 col-lg-10 col-xl-9 mt-5 mx-auto justify-content-center d-flex flex-wrap">
+        <div className="content items-contian col-12 col-xl-9 mt-5 mx-auto justify-content-center d-flex flex-wrap">
           {this.renderCharacters()}
         </div>
         
+        <Message
+          message={this.state.message}
+          messageClass={this.state.messageClass}
+         />
       </div>
     );
   }

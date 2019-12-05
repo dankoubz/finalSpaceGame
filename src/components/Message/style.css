@@ -1,0 +1,40 @@
+section {
+    color: white;
+    background-color: rgba(26, 26, 26, 0.5);
+    -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+}
+
+.correct {
+    color: lightgreen;
+}
+
+.incorrect {
+    color: hotpink;
+}
+
+section h3 {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity:1;
+    }
+
+    30% {
+        opacity:1;
+    }
+  
+    50% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity:1;
+    }
+
+    100% {
+        opacity:1;
+    }
+  }
