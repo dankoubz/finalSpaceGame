@@ -1,0 +1,31 @@
+.logoPos {
+    position: absolute;
+    width:  auto;
+    z-index: 5;
+    top: 50px;
+    left: 0;
+}
+
+aside {
+    padding: 10px;
+}
+
+aside img.social {
+    width: 40px;
+}
+
+aside img.google {
+    height: 30px;
+    margin: 5px 0;
+    display: block;
+}
+
+aside h3 {
+    font-size: 1.45em;
+    line-height: .5em;
+}
+
+aside h1 {
+    font-size: 1.9em;
+    line-height: 1em;
+}

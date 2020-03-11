@@ -1,0 +1,12 @@
+.navPos {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+    z-index: 3;
+}
+
+nav {
+    border: #5a5a5a 1px solid;
+    padding: 10px 15px 0 0;
+    position: relative;
+}
