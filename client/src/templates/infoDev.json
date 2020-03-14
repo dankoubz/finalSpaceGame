@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "name": "1khub",
+        "description": "Online content management system"
+    },
+    {
+        "id": 1,
+        "name": "GenArm2z",
+        "description": "Website for Arm Electornics supporting the youth"
+    },
+    {
+        "id": 2,
+        "name": "Final Space Game",
+        "description": "React based game for fun!"
+    },
+    {
+        "id": 3,
+        "name": "1000pages",
+        "description": "Developed a company wikipedia page"
+    },
+    {
+        "id": 4,
+        "name": "Lenovo GifMatch",
+        "description": "Bespoke game for Lenovo at Siggraph animation event"
+    },
+    {
+        "id": 5,
+        "name": "1000emails",
+        "description": "Web email builder for comapny use"
+    },
+    {
+        "id": 2,
+        "name": "Marvel Hangman",
+        "description": "First game built!"
+    },
+    {
+        "id": 6,
+        "name": "Debugger Game",
+        "description": "8-bit game in JavaScript"
+    }
+]

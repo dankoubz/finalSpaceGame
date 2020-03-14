@@ -1,0 +1,92 @@
+[
+    {
+        "id": 0,
+        "name": "Adobe Photoshop",
+        "rating": "80",
+        "tags": ["graphic design", "pixels"]
+    },
+    {
+        "id": 1,
+        "name": "Adobe Illustrator",
+        "rating": "87",
+        "tags": ["graphic design", "vectors"]
+    },
+    {
+        "id": 2,
+        "name": "Adobe After Effects",
+        "rating": "80",
+        "tags": ["motion graphics", "animation"]
+    },
+    {
+        "id": 3,
+        "name": "Adobe Premiere Pro",
+        "rating": "75",
+        "tags": ["editing", "videography"]
+    },
+    {
+        "id": 4,
+        "name": "Adobe Experience Design",
+        "rating": "80",
+        "tags": ["user experience", "ux & ui"]
+    },
+    {
+        "id": 5,
+        "name": "HTML5 & CSS3",
+        "rating": "90",
+        "tags": ["front-end", "markup"]
+    },
+    {
+        "id": 6,
+        "name": "Boostrap 4",
+        "rating": "90",
+        "tags": ["front-end", "web design"]
+    },
+    {
+        "id": 7,
+        "name": "JavaScript & JQuery",
+        "rating": "80",
+        "tags": ["front-end", "back-end"]
+    },
+    {
+        "id": 8,
+        "name": "Node.js & Express.js",
+        "rating": "78",
+        "tags": ["back-end", "server side"]
+    },
+    {
+        "id": 9,
+        "name": "Rect.js",
+        "rating": "80",
+        "tags": ["full-stack", "framework"]
+    },
+    {
+        "id": 10,
+        "name": "MYSQL",
+        "rating": "73",
+        "tags": ["data storage", "server side"]
+    },
+    {
+        "id": 11,
+        "name": "MongoDB",
+        "rating": "80",
+        "tags": ["data storage", "server side"]
+    },
+    {
+        "id": 12,
+        "name": "GitHub & Git",
+        "rating": "90",
+        "tags": ["best practice", "commits"]
+    },
+    {
+        "id": 13,
+        "name": "Spark AR",
+        "rating": "75",
+        "tags": ["face filters", "AR"]
+    },
+    {
+        "id": 14,
+        "name": "Microsoft Office 365",
+        "rating": "95",
+        "tags": ["powerpoint", "excel"]
+    }
+]

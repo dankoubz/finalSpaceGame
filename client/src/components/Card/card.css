@@ -1,0 +1,17 @@
+.cardPos {
+    width: 100%;
+    height: 600px;
+    padding: 0;
+}
+
+.card {
+    height: 100%;
+    position: relative;
+    background: transparent;
+}
+
+@media only screen and (max-width: 450px) {
+    .cardPos {
+        height: 550px;
+    }
+}
